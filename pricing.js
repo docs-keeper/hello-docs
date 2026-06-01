@@ -15,3 +15,8 @@ export const LOYALTY_REDEEM_RATE = 0.01;
 export const GIFT_CARD_MIN = 25;
 export const GIFT_CARD_MAX = 500;
 export const RETURN_WINDOW_DAYS = 30;
+export function memberPrice(price) { return price * 0.9; }
+export function withTax(price) { return price * 1.08; }
+export function shippingFor(subtotal) { return subtotal >= 50 ? 0 : 5; }
+export function loyaltyPoints(spend) { return Math.floor(spend * 2); }
+export function applyCoupon(price) { return price * 0.8; }
